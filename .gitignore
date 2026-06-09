@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.venv-profiling
+
+# Type-checker cache
+.mypy_cache/
+
+# Datos de las empresas — NUNCA subir (info confidencial de documentos DIAN)
+# Se ignora todo data/ : fuentes (.xlsm), base SQLite y todo lo generado.
+data/
+
+# Notebooks — pueden tener datos reales en las celdas de output (no subir)
+notebooks/
+
+# Datos sueltos en notebooks (exportes, movimientos bancarios, etc.)
+notebooks/*.csv
+notebooks/*.xlsx
+notebooks/*.xlsm
+
+# Perfiles de Chrome para el scraping del portal DIAN
+.chrome_cdp_profile/
+.chrome_profile/

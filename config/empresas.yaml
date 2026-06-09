@@ -1,0 +1,26 @@
+# config/empresas.yaml
+# carpeta = subcarpeta exacta dentro de data/raw/ que contiene los .xlsm
+empresas:
+  - nombre: "RURAGRO S.A.S."
+    nit: "901093775"
+    carpeta: "ruragro"
+
+  - nombre: "BITROIL S.A.S."
+    nit: "900951054"
+    carpeta: "bitroil"
+
+  - nombre: "ESTACION DE SERVICIO LA MIA HOYOS VELASQUEZ SAS"
+    nit: "901541882"
+    carpeta: "hoyos_velasquez"
+
+  - nombre: "ARIAS REYES JOSE ANTONIO- ESTACION DE SERVICIO TEX"
+    nit: "19097591"
+    carpeta: "arias_reyes"
+
+  - nombre: "SOCIEDAD ARIAS & CORREA S.A.S"
+    nit: "901594376"
+    carpeta: "arias_correa"
+    
+  - nombre: "RURAGRO S.A.S."
+    nit: "901093775"
+    carpeta: "ruragro_ventas"

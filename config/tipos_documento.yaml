@@ -1,0 +1,79 @@
+# Tipos de documento que ENTRAN en cada informe.
+#
+# ¿No sabes qué tipos hay en los datos? Corre:
+#     uv run tipos_runner.py <empresa>
+# y verás la lista exacta (con conteos) para esa empresa. El emparejamiento
+# ignora tildes y mayúsculas.
+#
+# Estructura:
+#   - "default"  -> selección que se usa para CUALQUIER empresa que no tenga
+#                   la suya propia.
+#   - "<carpeta>" -> selección específica de una empresa (sobrescribe el
+#                    default solo en las listas que defina).
+#
+# Lados:
+#   - ventas y soporte: documentos donde la empresa ES el emisor.
+#   - compras:          documentos emitidos por un tercero.
+
+default:
+  ventas:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+  compras:
+     - "Factura electrónica"
+     - "Nota de crédito electrónica"
+     - "Documento equivalente POS"
+     - "Nota de débito electrónica"
+  soporte:
+    - "Documento soporte con no obligados"
+
+# Ejemplo de override por empresa (clave = carpeta en data/raw/).
+# RURAGRO además incluye "Documento equivalente POS" en compras:
+ruragro:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Nota de débito electrónica"
+bitroil:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Factura electrónica de contingencia"
+    - "Nota de débito electrónica"
+    - "Documento equivalente - Cobro de peajes"
+
+hoyos_velasquez:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Factura electrónica de contingencia DIAN"
+    - "Nota de débito electrónica"
+    # documento soporte de TERCEROS (emisor ≠ empresa); el de la propia
+    # empresa sigue yendo al informe 'soporte'.
+arias_reyes:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Factura electrónica de contingencia DIAN"
+    - "Nota de débito electrónica"
+    # documento soporte de TERCEROS (emisor ≠ empresa); el de la propia
+    # empresa sigue yendo al informe 'soporte'.
+    - "Documento soporte con no obligados"
+
+  arias_correa:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Nota de débito electrónica"
+
+ruragro_ventas:
+  compras:
+    - "Factura electrónica"
+    - "Nota de crédito electrónica"
+    - "Documento equivalente POS"
+    - "Nota de débito electrónica"
